@@ -1,15 +1,10 @@
-import type { Metadata } from "next"
+import { redirect } from "next/navigation"
 
-export const metadata: Metadata = {
-  title: "Obra | Mosteiro Maria Imaculada",
-  description: "Obra - Irmãs Clarissas",
+export const metadata = {
+  title: "Obra",
+  description: "Ajude as Irmãs Clarissas a concluir a obra do Mosteiro Maria Imaculada em Marília-SP. Qualquer contribuição faz diferença. Que Deus recompense a todos os benfeitores.",
 }
 
 export default function ObraPage() {
-  return (
-    <div className="mx-auto max-w-5xl px-4 py-16">
-      <h1 className="mb-6 text-2xl font-semibold">Obra</h1>
-      <p className="text-muted-foreground">[Conteúdo em breve]</p>
-    </div>
-  )
+  redirect("/#obra")
 }

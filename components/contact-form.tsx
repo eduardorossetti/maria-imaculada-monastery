@@ -1,6 +1,6 @@
 "use client";
 
-import { zodResolver } from "@hookform/resolvers/zod";
+import { standardSchemaResolver } from "@hookform/resolvers/standard-schema";
 import { FormProvider, useForm } from "react-hook-form";
 import { toast } from "sonner";
 
@@ -30,7 +30,7 @@ import {
 
 export function ContactForm() {
   const form = useForm<ContactFormData>({
-    resolver: zodResolver(contactFormSchema as never),
+    resolver: standardSchemaResolver(contactFormSchema),
     defaultValues: {
       name: "",
       email: "",

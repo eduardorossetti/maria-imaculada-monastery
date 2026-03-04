@@ -5,6 +5,17 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --color-taupe-50: oklch(98.4% 0.006 55);
+  --color-taupe-100: oklch(96.2% 0.012 52);
+  --color-taupe-200: oklch(92% 0.02 48);
+  --color-taupe-300: oklch(86.5% 0.028 46);
+  --color-taupe-400: oklch(71% 0.045 44);
+  --color-taupe-500: oklch(55% 0.055 42);
+  --color-taupe-600: oklch(44% 0.05 40);
+  --color-taupe-700: oklch(37% 0.042 38);
+  --color-taupe-800: oklch(28% 0.032 36);
+  --color-taupe-900: oklch(21% 0.022 35);
+  --color-taupe-950: oklch(15% 0.014 34);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
@@ -14,7 +25,7 @@
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-mono: ui-monospace, monospace;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -38,6 +49,7 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+  --color-section-bg: var(--section-bg);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -49,6 +61,18 @@ body {
 }
 
 :root {
+  --color-taupe-50: oklch(98.4% 0.006 55);
+  --color-taupe-100: oklch(96.2% 0.012 52);
+  --color-taupe-200: oklch(92% 0.02 48);
+  --color-taupe-300: oklch(86.5% 0.028 46);
+  --color-taupe-400: oklch(71% 0.045 44);
+  --color-taupe-500: oklch(55% 0.055 42);
+  --color-taupe-600: oklch(44% 0.05 40);
+  --color-taupe-700: oklch(37% 0.042 38);
+  --color-taupe-800: oklch(28% 0.032 36);
+  --color-taupe-900: oklch(21% 0.022 35);
+  --color-taupe-950: oklch(15% 0.014 34);
+
   --radius: 0.625rem;
   --background: var(--color-taupe-50);
   --foreground: var(--color-taupe-950);
@@ -81,6 +105,15 @@ body {
   --sidebar-accent-foreground: var(--color-taupe-900);
   --sidebar-border: var(--color-taupe-300);
   --sidebar-ring: var(--color-taupe-500);
+  --section-bg: linear-gradient(
+    to bottom,
+    var(--color-taupe-200) 0%,
+    color-mix(in oklch, var(--color-taupe-200) 25%, var(--color-taupe-50)) 50%,
+    var(--color-taupe-50) 100%
+  );
+  --header-footer-bg: var(--background);
+  --header-footer-shadow: 0 1px 3px oklch(0.4 0.02 60 / 0.06);
+  --header-footer-shadow-top: 0 -1px 3px oklch(0.4 0.02 60 / 0.06);
 }
 
 .dark {
@@ -115,6 +148,15 @@ body {
   --sidebar-accent-foreground: var(--color-taupe-50);
   --sidebar-border: var(--color-taupe-700);
   --sidebar-ring: var(--color-taupe-500);
+  --section-bg: linear-gradient(
+    to bottom,
+    var(--color-taupe-800) 0%,
+    color-mix(in oklch, var(--color-taupe-800) 20%, var(--color-taupe-950)) 50%,
+    var(--color-taupe-950) 100%
+  );
+  --header-footer-bg: var(--background);
+  --header-footer-shadow: 0 1px 3px oklch(0 0 0 / 0.15);
+  --header-footer-shadow-top: 0 -1px 3px oklch(0 0 0 / 0.15);
 }
 
 @layer base {
@@ -123,5 +165,23 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Timeline da Gênese do Mosteiro: linha à esquerda + bolinha em cada item */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: calc(-1.5rem - 0.375rem); /* pl-6 (24px) - metade do círculo (6px) = centro na linha */
+  top: 0.5rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: var(--primary);
+}
+
+@media (min-width: 640px) {
+  .timeline-item::before {
+    left: calc(-2rem - 0.375rem); /* pl-8 (32px) no sm */
   }
 }
