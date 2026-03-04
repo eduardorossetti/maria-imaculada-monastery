@@ -21,6 +21,7 @@ export default function QuemSomosPage() {
               src="/quem-somos.jpg"
               alt="Mosteiro Maria Imaculada"
               fill
+              unoptimized
               className="object-cover"
               priority
             />
@@ -52,6 +53,7 @@ export default function QuemSomosPage() {
               src="/dia-a-dia.jpg"
               alt="Dia a dia no mosteiro"
               fill
+              unoptimized
               className="object-cover"
             />
           </div>

@@ -53,6 +53,7 @@ export default function NossoMosteiroPage() {
               src="/mosteiro-marilia.jpg"
               alt="Mosteiro Maria Imaculada, Marília"
               fill
+              unoptimized
               className="object-cover"
               priority
             />
@@ -83,6 +84,7 @@ export default function NossoMosteiroPage() {
                 src="/mosteiro-sao-damiao.webp"
                 alt="Mosteiro de São Damião, Assis"
                 fill
+                unoptimized
                 className="object-cover"
               />
             </div>
@@ -137,6 +139,7 @@ export default function NossoMosteiroPage() {
                 src="/mosteiro-besancon.png"
                 alt="Mosteiro de Besançon"
                 fill
+                unoptimized
                 className="object-cover"
               />
             </div>
@@ -178,6 +181,7 @@ export default function NossoMosteiroPage() {
                 src="/mosteiro-belem.jpg"
                 alt="Santa Coleta - Mosteiro Belém, Gant"
                 fill
+                unoptimized
                 className="object-cover"
               />
             </div>
@@ -213,6 +217,7 @@ export default function NossoMosteiroPage() {
                 src="/mosteiro-tongren.png"
                 alt="Tongres, Bélgica"
                 fill
+                unoptimized
                 className="object-cover"
               />
             </div>
@@ -235,6 +240,7 @@ export default function NossoMosteiroPage() {
                 src="/mosteiro-dusseldorf.jpg"
                 alt="Mosteiro Sagrado Coração, Düsseldorf"
                 fill
+                unoptimized
                 className="object-cover"
               />
             </div>
@@ -262,6 +268,7 @@ export default function NossoMosteiroPage() {
                 src="/mosteiro-rio-gavera.jpg"
                 alt="Mosteiro Nossa Senhora dos Anjos, Rio de Janeiro"
                 fill
+                unoptimized
                 className="object-cover"
               />
             </div>
@@ -280,6 +287,7 @@ export default function NossoMosteiroPage() {
                     src={sister.src}
                     alt={sister.name}
                     fill
+                    unoptimized
                     className="object-cover"
                   />
                 </div>
@@ -303,6 +311,7 @@ export default function NossoMosteiroPage() {
                 src="/mosteiro-caico.jpg"
                 alt="Mosteiro de N. Sra. de Guadalupe, Caicó"
                 fill
+                unoptimized
                 className="object-cover"
               />
             </div>
@@ -333,6 +342,7 @@ export default function NossoMosteiroPage() {
                 src="/mosteiro-maria-imaculada.jpg"
                 alt="Mosteiro Maria Imaculada, Marília"
                 fill
+                unoptimized
                 className="object-cover"
               />
             </div>
@@ -366,6 +376,7 @@ export default function NossoMosteiroPage() {
                 src="/mosteiro-nazare.jpg"
                 alt="Mosteiro Nazaré, Lages"
                 fill
+                unoptimized
                 className="object-cover"
               />
             </div>

@@ -31,6 +31,7 @@ export default function VocacaoPage() {
               src="/santa-clara.jpg"
               alt="Santa Clara de Assis"
               fill
+              unoptimized
               className="object-cover"
               priority
             />
@@ -113,6 +114,7 @@ export default function VocacaoPage() {
                 alt="Aspirante e Postulante"
                 width={0}
                 height={0}
+                unoptimized
                 sizes="(max-width: 768px) 100vw, 320px"
                 style={{ width: "100%", height: "auto" }}
               />
@@ -149,6 +151,7 @@ export default function VocacaoPage() {
                 alt="Noviça"
                 width={0}
                 height={0}
+                unoptimized
                 sizes="(max-width: 768px) 100vw, 320px"
                 style={{ width: "100%", height: "auto" }}
               />
@@ -202,6 +205,7 @@ export default function VocacaoPage() {
                 alt="Professa Solene"
                 width={0}
                 height={0}
+                unoptimized
                 sizes="(max-width: 768px) 100vw, 320px"
                 style={{ width: "100%", height: "auto" }}
               />

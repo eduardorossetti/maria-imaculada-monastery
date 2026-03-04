@@ -36,6 +36,7 @@ export function DonationSection() {
               alt="QR Code PIX"
               width={180}
               height={180}
+              unoptimized
               className="size-40 object-contain sm:size-48"
             />
           </div>
